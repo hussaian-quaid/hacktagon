@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBSITE</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                ZA<span>HU</span>X
+            </div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">Products</a>
+                <a href="#">Account</a>
+                <a href="#">Cart</a>
+            </div>
+            <div class="icon">
+                <i class='bx bx-cart'></i>
+                <i class='bx bx-user'></i>
+            </div>
+        </nav>
+    </header>
+    <section class="main-home">
+        <div class="main-text">
+            <h5>Winter Collection</h5>
+            <h1>New Winter <br> Collection</h1>
+            <p>There's like a trend</p>
+
+            <a href="#" class="main-btn">Shop Now</a>
+            <a href="#" class="btn"></a>
+        </div>
+
+        </div>
+    </section>
+   
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script type="text/javascript">
+        $('.portfolio-items ').isotope({
+  // options
+  itemSelector: '.item',
+  layoutMode: 'fitRows'
+});
+    $('.portfolio-menu ul li').click(function(){
+    $('.portfolio-menu ul li').removeClass('active');
+    $(this).addClass('active');
+
+    var selector = $(this).attr('data-filter');
+    $('.portfolio-items ').isotope({
+        filter:selector
+    });
+    return false; 
+
+});
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>
